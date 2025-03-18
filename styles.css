@@ -135,20 +135,22 @@
 .ad-content {
     position: absolute;
     top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    left: 5%;
+    transform: translateY(-10%);
+    background: rgba(201, 196, 124, 0.701);
     color: white;
     padding: 20px;
     border-radius: 10px;
 }
 .ad-content h2 {
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 10px;
+    color: #74530b;
 }
 .ad-content p {
-    font-size: 16px;
+    font-size: 30px;
     margin-bottom: 15px;
+    color: #0b0909;
 }
 .shop-btn {
     background: #ff9800;
@@ -181,7 +183,7 @@
 }
 
 h2 {
-    color: #612727;
+    color: #040404;
     font-size: 40px;
 }
 
@@ -190,7 +192,7 @@ p {
     font-size: 16px;
     max-width: 1000px;
     margin: 30px auto 30px auto;
-    color: #d2c9c9;
+    color: #0c0b0b;
     line-height: 1.6;
 
 }
@@ -198,7 +200,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Khoảng cách giữa các phần tử */
+    gap: 30px; /* Khoảng cách giữa các phần tử */
 }
 .logo1 img {
     border-radius: 55%; /* Bo tròn hình ảnh */
@@ -253,4 +255,26 @@ p {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+#video-caption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.video-intro {
+  
+    background-color: rgba(153, 144, 72, 0.919);
+}
+#video-container {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.video-play {
+    margin-left: auto; 
+}
+.video-play video {
+    height: 535px;
+    width: auto; 
 }
