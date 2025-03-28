@@ -356,3 +356,54 @@ p {
     font-size: 16px;
 
 }
+
+.content-popular{
+    background-color: #AA9D84;
+}
+
+
+.container h2 {
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    margin-block: 20px;
+    padding-top: 40px;
+}
+.container p {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: -40px;
+   /* // margin-bottom: 20px; */
+}
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+/* .images img {
+    width: 400px;
+    height: auto;
+    border-top-right-radius: 70px;
+
+} */
+
+.image1 {
+    width: 400px; /* Chiều rộng của hình ảnh */
+    height: auto; /* Chiều cao của hình ảnh */
+    border-top-right-radius: 70px;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng đổ bóng */
+
+
+}
+
+.image2 {
+    width: 400px; /* Chiều rộng của hình ảnh */
+    height: auto; /* Chiều cao của hình ảnh */
+    border-top-left-radius: 70px;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng đổ bóng */
+}
+
