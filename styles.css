@@ -681,7 +681,8 @@ h2[class="card-title"] {
 #content-subscribe{
     width: 100%;
     height: 80vh;
-    background: linear-gradient(#0e3d46, #295760);
+    background: linear-gradient(45deg, #2E394B, #3C4B62);
+    opacity: 100%;
     display: flex;
 }
 
@@ -695,9 +696,7 @@ h2[class="card-title"] {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: space-evenly;
-    
-    
+    justify-content: center;
 }
 #subscribe-form h2{
     color: white;
@@ -708,16 +707,29 @@ h2[class="card-title"] {
     display: none;
 }
 
+#subscribe-form form input{
+    color: black;
+}
+
+#subscribe-form form button{
+    background-color: #3a7eab;
+}
+
+#subscribe-form form button:hover{
+    background-color: #1B4665;
+    color: white;
+}
+
 #subscribe-form form *{
     display: block;
     margin-inline: auto;
-    margin-block: 10px;
+    margin-block: 15px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
     font-size: 1.2rem;
     border-radius: 10px;
-    width: 80%;
+    width: 60%;
 }
 
 
