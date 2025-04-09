@@ -1,38 +1,39 @@
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const slider = document.getElementById("slider");
 
-function showSlide(index) {
-    if (index >= slides.length) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = slides.length - 1;
-    } else {
-        currentIndex = index;
+new Swiper('.card-wrapper', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    spaceBetween: 30,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // Autoplay
+    // autoplay: {
+    //     // delay: 3000,
+    //     disableOnInteraction: false,
+    // },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        },
     }
-
-    // Xóa class 'active' khỏi tất cả slides
-    slides.forEach(slide => slide.classList.remove("active"));
-
-    // Thêm class 'active' vào slide hiện tại
-    slides[currentIndex].classList.add("active");
-
-    // Dịch chuyển slider
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
-
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
-
-document.querySelector(".next").addEventListener("click", nextSlide);
-document.querySelector(".prev").addEventListener("click", prevSlide);
-
-// Đặt slide đầu tiên thành active khi load trang
-showSlide(currentIndex);
-// Automatically switch slides every 3 seconds
-setInterval(nextSlide, 3000);
+    
+});
+       
