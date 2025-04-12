@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rochester&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rochester&display=swap" rel="stylesheet');
 
+
 body {
     background-color: #E9DDD7;
 }
@@ -11,12 +12,52 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--g5-body-font);
+    /* font-family: var(--g5-body-font);  */
+    /* cái này bị lỗi font */
+    font-family: "DM Sans", sans-serif;
 }
 
 :root {
+    /* font */
     --g5-body-font: 'edmondsans', Arial, sans-serif;
-    /* Định nghĩa biến font */
+
+    /* màu */
+    --light-gray: #999999;
+    --dark_blue: #274B53;
+    --black_900: #000000;
+    --black_900_89: #00000089;
+    --blue_gray_100: #d9d9d9;
+    --blue_gray_700: #305a62;
+    --blue_gray_800: #264b52;
+    --deep_orange_800_bf: #e23d0fbf;
+    --gray_200: #efefef;
+    --gray_300: #e8dad2;
+    --gray_400: #b6b6b6;
+    --gray_50: #fbfbfb;
+    --gray_500: #989898;
+    --gray_500_01: #b7a990;
+    --gray_500_02: #ababab;
+    --gray_600: #6f6f6f;
+    --gray_600_01: #aa7b61;
+    --gray_700: #646464;
+    --gray_800: #683218;
+    --gray_800_01: #3f3f3f;
+    --gray_800_02: #4c4c4c;
+    --gray_800_03: #505050;
+    --pink_100: #e8cccc;
+    --red_a100_66: #e5927c66;
+    --white_a700: #ffffff;
+
+    /* Khoảng cách */
+    --space-xs: 10px;
+    --space-sm: 14px;
+    --space-md: 20px;
+    --space-lg: 32px;
+    --space-xl: 52px
+}
+
+li {
+    list-style-type: none;
 }
 
 /* Top Bar */
@@ -679,7 +720,8 @@ h2[class="card-title"] {
     }
 
 }
-#content-subscribe{
+
+#content-subscribe {
     width: 100%;
     height: 80vh;
     background: linear-gradient(45deg, #2E394B, #3C4B62);
@@ -687,11 +729,11 @@ h2[class="card-title"] {
     display: flex;
 }
 
-#content-subscribe div{
+#content-subscribe div {
     height: 100%;
 }
 
-#subscribe-form{
+#subscribe-form {
     width: 50%;
     height: 100%;
     display: flex;
@@ -699,29 +741,30 @@ h2[class="card-title"] {
     align-items: stretch;
     justify-content: center;
 }
-#subscribe-form h2{
+
+#subscribe-form h2 {
     color: white;
     margin-inline: auto;
 }
 
-#subscribe-form form label{
+#subscribe-form form label {
     display: none;
 }
 
-#subscribe-form form input{
+#subscribe-form form input {
     color: black;
 }
 
-#subscribe-form form button{
+#subscribe-form form button {
     background-color: #3a7eab;
 }
 
-#subscribe-form form button:hover{
+#subscribe-form form button:hover {
     background-color: #1B4665;
     color: white;
 }
 
-#subscribe-form form *{
+#subscribe-form form * {
     display: block;
     margin-inline: auto;
     margin-block: 15px;
@@ -735,14 +778,14 @@ h2[class="card-title"] {
 
 
 
-#img-subscribe{
+#img-subscribe {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
 }
 
-#img-subscribe img{
+#img-subscribe img {
     width: 90%;
     height: 90%;
     min-width: 300px;
@@ -750,23 +793,130 @@ h2[class="card-title"] {
     max-height: 500px;
 }
 
+.page-header {
+    background-color: white !important;
+    display: block;
+    padding: 30px 50px;
+
+}
+
+.normal-font {
+    font-family: var(--g5-body-font);
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1
+}
+
+.color-light-gray {
+    color: var(--light-gray)
+}
+
+.page-main-content {
+    background-color: #E9DAD3;
+    padding: 50px;
+    display: flex;
+    gap: 46px;
+}
+
+.main-left-content {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 20px;
+}
+
+.main-img {
+    object-fit: cover;
+    height: 566px;
+    border-radius: 14px;
+}
+
+.sub-img {
+    border-radius: 10px;
+    width: 120px;
+    height: 130px;
+}
+
+.main-right-content{
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.back-to-selection{
+    width: 100%;
+    color: var(--gray_800_03);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.product-name{
+    color: var(--black_900);
+    font-family: 'Cormorant Garamond';
+    font-size: 35px;
+    font-weight: 400;
+    width: 84%;
+    line-height: 42px;
+    margin-top: 10px;
+}
+
+.ico{
+    height: 33px;
+}
+
+.ico-favorite{
+    align-self: flex-end;
+    margin-right: 34px;
+}
+
+.product-price{
+    width: 100%;
+    color: var(--black_900_89) !important;
+    margin-top: 40px;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.justify-space-around {
+    justify-content: space-around;
+}
+
 
 /* footer */
-#footer-content{
+#footer-content {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-footer{
+footer {
     height: 50vh;
     background-color: #274B53;
 }
 
-.footer h2{
+.footer h2 {
     font-family: 'Cormorant Garamond';
 }
-.footer a{
+
+.footer a {
     font-family: 'karla';
     font-size: 1em;
     display: block;
@@ -775,19 +925,17 @@ footer{
     margin-block: 0.8em;
 }
 
-.footer a:hover{
+.footer a:hover {
     text-decoration: underline;
 }
 
-.footer h2{
+.footer h2 {
     font-size: 1.3em;
 }
 
 
-#group-member p{
+#group-member p {
     font-size: 1em;
     margin-block: 0.5em;
     color: white;
 }
-
-

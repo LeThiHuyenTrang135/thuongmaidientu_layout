@@ -1,0 +1,163 @@
+:root {
+
+}
+
+.footerview {
+    height: 388px;
+    display: flex;
+    background-color: var(--dark_blue);
+    justify-content: center;
+    align-items: center;
+    padding: 66px 24px;
+
+    @media only screen and (max-width: 1050px) {
+        height: auto;
+        padding-top: var(--space-md);
+        padding-bottom: var(--space-md);
+    }
+
+    @media only screen and (max-width: 550px) {
+        padding: var(--space-md)
+    }
+}
+
+.columnview {
+    margin-top: 12px;
+    gap: var(--space-xl);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 1154px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media only screen and (max-width: 550px) {
+        gap: 26px
+    }
+}
+
+.rowview {
+    margin-right: 40px;
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+
+    @media only screen and (max-width: 1050px) {
+        flex-direction: column;
+        margin-right: 0px;
+    }
+}
+
+.stackview {
+    height: 128px;
+    margin-bottom: 6px;
+    align-self: flex-end;
+    width: 28%;
+    position: relative;
+
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+    }
+}
+
+.view {
+    height: 128px;
+    background-color: var(--blue_gray_100);
+    width: 62%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+}
+
+.gljewelry {
+    color: var(--blue_gray_100) !important;
+    font-family: "Kings", cursive !important;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: max-content;
+    width: max-content;
+    margin: auto;
+}
+
+.rowcustomer {
+    width: 64%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+
+    @media only screen and (max-width: 1050px) {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.columncustomer {
+    gap: var(--space-xs);
+    display: flex;
+    width: 32%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+    }
+}
+
+.columnaboutus {
+    gap: var(--space-xs);
+    display: flex;
+    width: 22%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+    }
+}
+
+.columnmaterialc {
+    gap: var(--space-xs);
+    align-self: flex-start;
+    display: flex;
+    width: 28%;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+    }
+}
+
+.rowapollonianll {
+    width: 66%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+
+    @media only screen and (max-width: 1050px) {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.apollonianllc{
+    color: var(--black_900);
+}
+
+.rowprivacy{
+    gap: var(--space-xs);
+    display: flex;
+    flex-wrap: wrap;
+}
