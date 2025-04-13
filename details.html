@@ -21,7 +21,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kings&display=swap"
         rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
     <header>
@@ -77,6 +77,79 @@
                 <h3 class="product-name">Dây chuyền bạc đính pha lê Aurora mặt trăng</h3>
                 <img class="ico ico-favorite" src="img/ico_heart.svg" />
                 <p class="product-price">982.000đ</p>
+                <div class="product-size-section display-flex">
+                    <p>Size: </p>
+                    <ul class="product-size display-flex">
+                        <li>14</li>
+                        <li class="product-size-selected">16</li>
+                        <li>18</li>
+                    </ul>
+                </div>
+                <div class="product-quantity-add-to-cart-section display-flex">
+                    <div class="product-quantity display-flex">
+                        <span class="btn minus-qty-btn" id="minus-qty"><img src="img/ico_minus.svg"></span>
+                        <input class="quantity-number" type="number" value="1" />
+                        <span class="btn plus-qty-btn" id="plus-qty"><img src="img/ico_plus.svg" /></span>
+                    </div>
+                    <button class="btn add-to-cart-btn">
+                        Thêm vào giỏ hàng
+                    </button>
+                </div>
+                <div class="category-section border-bottom width-100 display-flex">
+                    <h3>Danh mục: </h3>
+                    <ul class="category-list display-flex">
+                        <li>Dây chuyền</li>
+                    </ul>
+                </div>
+                <div class="tag-section border-bottom width-100 display-flex">
+                    <h3>Tags: </h3>
+                    <ul class="tag-list display-flex">
+                        <li>Dây chuyền</li>
+                        <li>Dây chuyền</li>
+                    </ul>
+                </div>
+                <div class="share-section border-bottom width-100 display-flex">
+                    <h3>Chia sẻ: </h3>
+                    <ul class="share-list display-flex">
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-twitter"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product-describe-rating">
+            <div class="product-tab" id="product-tab">
+                <ul class="tab-nav">
+                    <li>Mô tả</li>
+                    <li class="active">Đánh giá</li>
+                </ul>
+            </div>
+            <div class="product-tab-content-section">
+                <div id="tab-describe" class="product-tab-content display-none">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis pretium augue vitae
+                        sagittis. In vitae sem eu sapien cursus eleifend ac in nisi.
+                        <br />
+                        <br />
+                        Fusce posuere felis at turpis commodo placerat eu ac urna. Aenean varius consequat tellus, a
+                        vehicula nulla sodales non. Aenean nec viverra orci. Donec volutpat orci a maximus euismod.
+                        Donec vel dapibus augue. Cras dignissim eleifend lectus, sit amet pulvinar ipsum laoreet vitae.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                        Pellentesque suscipit commodo nibh.
+                    </p>
+                </div>
+
+                <div id="tab-rating" class="product-tab-content">
+                    <div class="rating-header">
+                        <div class="rating-header-left">
+                            <h4>4.5</h4>
+                        </div>
+                        <div class="rating-header-right">
+                            <p>right</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
