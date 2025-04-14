@@ -1089,7 +1089,7 @@ ul.tab-nav li.active {
     flex: 2;
 }
 
-.rating-header-left h4{
+.rating-header-left h4 {
     font-size: 55px;
     text-align: center;
 }
@@ -1109,9 +1109,29 @@ input.quantity-number::-webkit-inner-spin-button {
 /* footer */
 #footer-content {
     display: flex;
-    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
     align-items: center;
 }
+
+#footer-content ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.footer-right-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
 
 footer {
     height: 50vh;
@@ -1144,4 +1164,8 @@ footer {
     font-size: 1em;
     margin-block: 0.5em;
     color: white;
+}
+
+#material-care{
+    margin-top: -20%;
 }
