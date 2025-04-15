@@ -50,16 +50,21 @@ body {
     --white_a700: #ffffff;
     --white_a700_50: #D5CEC2;
 
+
     /* Khoảng cách */
     --space-xs: 10px;
     --space-sm: 14px;
     --space-md: 20px;
     --space-lg: 32px;
-    --space-xl: 52px
+    --space-xl: 52px --cherry: #ea6e6e;
 }
 
 li {
     list-style-type: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Top Bar */
@@ -1117,7 +1122,8 @@ h5.sum-rating {
     align-items: flex-start;
     gap: 7px;
 }
-.rating-header-right li.number-rating{
+
+.rating-header-right li.number-rating {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -1129,7 +1135,7 @@ h5.sum-rating {
     width: 40px;
 }
 
-.number-rating .progress-bar{
+.number-rating .progress-bar {
     width: 100%;
     flex: 1;
     background-color: var(--blue_gray_100);
@@ -1137,30 +1143,83 @@ h5.sum-rating {
     border-radius: 20px;
 }
 
-.percentage-bar{
+.percentage-bar {
     background: var(--dark_blue);
     height: 8px;
     border-radius: 20px;
 }
 
-.bar-1{
+.bar-1 {
     width: 80%;
 }
 
-.bar-2{
+.bar-2 {
     width: 30%;
 }
 
-.bar-3{
+.bar-3 {
     width: 5%;
 }
 
-.bar-4{
+.bar-4 {
     width: 10%;
 }
 
-.bar-5{
+.bar-5 {
     width: 2%;
+}
+
+.rating-section ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.rating-section li {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.rating-star {
+    color: var(--white_a700);
+}
+
+.rating-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+
+.rating-section p {
+    margin: 0
+}
+
+.pagination {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pagination a {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    background-color: var(--blue_gray_100);
+    border-radius: 50%;
+    color: var(--black_900);
+    font-size: 17px;
+    padding-top: 11px;
+}
+
+.pagination .selected,
+.pagination a:hover {
+    background-color: var(--white_a700);
 }
 
 input.quantity-number::-webkit-outer-spin-button,
