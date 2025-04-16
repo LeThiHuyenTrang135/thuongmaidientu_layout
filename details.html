@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer_style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kings&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <header>
+        <section>
+            <div class="top-bar">
+                <div class="left">
+
+                    <span class="hotline"><i class="fas fa-phone"></i> <strong>hotline:</strong> (+00) 987 877
+                        821</span>
+                </div>
+                <div class="logo">
+                    <img src="img/logo.jpg" alt="Lustria Logo">
+                </div>
+                <div class="right">
+                    <a href="#">Log in / Register</a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="nav-bar">
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">All Categories</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Features</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <div class="page-header display-flex">
+            <h1 class="normal-font align-left flex-1">Shop</h1>
+            <p><span class="color-light-gray">Trang chủ > </span>Dây chuyền bạc đính pha lê Aurora mặt trăng</p>
+        </div>
+        <div class="page-main-content">
+            <div class="main-left-content">
+                <img class="main-img" src="img/dchuyen3.png" />
+                <ul class="display-flex justify-space-around">
+                    <li><img class="sub-img" src="img/dchuyen_nho_1.png" /></li>
+                    <li><img class="sub-img" src="img/dchuyen_nho_2.png" /></li>
+                    <li><img class="sub-img" src="img/dchuyen1.jpg" /></li>
+                    <li><img class="sub-img" src="img/dchuyen2.jpg" /></li>
+                </ul>
+            </div>
+            <div class="main-right-content">
+                <p class="back-to-selection">Quay lại</p>
+                <h3 class="product-name">Dây chuyền bạc đính pha lê Aurora mặt trăng</h3>
+                <img class="ico ico-favorite" src="img/ico_heart.svg" />
+                <p class="product-price">982.000đ</p>
+                <div class="product-size-section display-flex">
+                    <p>Size: </p>
+                    <ul class="product-size display-flex">
+                        <li>14</li>
+                        <li class="product-size-selected">16</li>
+                        <li>18</li>
+                    </ul>
+                </div>
+                <div class="product-quantity-add-to-cart-section display-flex">
+                    <div class="product-quantity display-flex">
+                        <span class="btn minus-qty-btn" id="minus-qty"><img src="img/ico_minus.svg"></span>
+                        <input class="quantity-number" type="number" value="1" />
+                        <span class="btn plus-qty-btn" id="plus-qty"><img src="img/ico_plus.svg" /></span>
+                    </div>
+                    <button class="btn add-to-cart-btn">
+                        Thêm vào giỏ hàng
+                    </button>
+                </div>
+                <div class="category-section border-bottom width-100 display-flex">
+                    <h3>Danh mục: </h3>
+                    <ul class="category-list display-flex">
+                        <li>Dây chuyền</li>
+                    </ul>
+                </div>
+                <div class="tag-section border-bottom width-100 display-flex">
+                    <h3>Tags: </h3>
+                    <ul class="tag-list display-flex">
+                        <li>Dây chuyền</li>
+                        <li>Dây chuyền</li>
+                    </ul>
+                </div>
+                <div class="share-section border-bottom width-100 display-flex">
+                    <h3>Chia sẻ: </h3>
+                    <ul class="share-list display-flex">
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-twitter"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product-describe-rating">
+            <div class="product-tab" id="product-tab">
+                <ul class="tab-nav">
+                    <li>Mô tả</li>
+                    <li class="active">Đánh giá</li>
+                </ul>
+            </div>
+            <div class="product-tab-content-section">
+                <div id="tab-describe" class="product-tab-content display-none">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis pretium augue vitae
+                        sagittis. In vitae sem eu sapien cursus eleifend ac in nisi.
+                        <br />
+                        <br />
+                        Fusce posuere felis at turpis commodo placerat eu ac urna. Aenean varius consequat tellus, a
+                        vehicula nulla sodales non. Aenean nec viverra orci. Donec volutpat orci a maximus euismod.
+                        Donec vel dapibus augue. Cras dignissim eleifend lectus, sit amet pulvinar ipsum laoreet vitae.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                        Pellentesque suscipit commodo nibh.
+                    </p>
+                </div>
+
+                <div id="tab-rating" class="product-tab-content">
+                    <div class="rating-header">
+                        <div class="rating-header-left">
+                            <h4 class="mean-rating-points">4.0</h4>
+                            <div class="mean-rating-star">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star-o"></span>
+                            </div>
+                            <h5 class="sum-rating">(10)</h5>
+                        </div>
+                        <ul class="rating-header-right">
+                            <li class="number-rating">
+                                <p>5</p>
+                                <div class="progress-bar">
+                                    <div class="percentage-bar bar-1"></div>
+                                </div>
+                            </li>
+                            <li class="number-rating">
+                                <p>4</p>
+                                <div class="progress-bar">
+                                    <div class="percentage-bar bar-2"></div>
+                                </div>
+                            </li>
+                            <li class="number-rating">
+                                <p>3</p>
+                                <div class="progress-bar">
+                                    <div class="percentage-bar bar-3"></div>
+                                </div>
+                            </li>
+                            <li class="number-rating">
+                                <p>2</p>
+                                <div class="progress-bar">
+                                    <div class="percentage-bar bar-4"></div>
+                                </div>
+                            </li>
+                            <li class="number-rating">
+                                <p>1</p>
+                                <div class="progress-bar">
+                                    <div class="percentage-bar bar-5"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rating-section">
+                        <ul>
+                            <li class="display-flex">
+                                <img class="rating-avatar" src="img/avatar_fem_1.png">
+                                <div class="rating-content">
+                                    <p class="rating-username">User 1</p>
+                                    <div class="rating-star">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </li>
+                            <li class="display-flex">
+                                <img class="rating-avatar" src="img/avatar_male_2.png">
+                                <div class="rating-content">
+                                    <p class="rating-username">User 2</p>
+                                    <div class="rating-star">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </li>
+                            <li class="display-flex">
+                                <img class="rating-avatar" src="img/avatar_fem_2.png">
+                                <div class="rating-content">
+                                    <p class="rating-username">User 1</p>
+                                    <div class="rating-star">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </li>
+                            <li class="display-flex">
+                                <img class="rating-avatar" src="img/avatar_male_2.png">
+                                <div class="rating-content">
+                                    <p class="rating-username">User 1</p>
+                                    <div class="rating-star">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                                        sit amet pulvinar ipsum. Ut fermentum libero a enim varius fringilla. Vestibulum
+                                        iaculis nulla suscipit vulputate semper. Vestibulum quis egestas libero. Cras
+                                        fermentum urna odio, vitae dictum ante elementum quis. Vestibulum laoreet ut
+                                        nisl quis porttitor. Suspendisse vestibulum quam vel leo tincidunt commodo.
+                                        Morbi congue, nulla a dignissim iaculis, ipsum metus ullamcorper elit, eget
+                                        tristique purus urna molestie diam. Vivamus egestas volutpat libero tincidunt
+                                        aliquet. Ut nec semper odio.</p>
+                                </div>
+                            </li>
+                            <li class="display-flex">
+                                <img class="rating-avatar" src="img/avatar_fem_1.png">
+                                <div class="rating-content">
+                                    <p class="rating-username">User 1</p>
+                                    <div class="rating-star">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pagination">
+                        <a href="#">«</a>
+                        <a href="#">‹</a>
+                        <a href="#" class="selected">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">›</a>
+                        <a href="#">»</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-content">
+            <div class="footer-left-content">
+                <img class="logo-footer" src="img/ico_footer.svg" />
+            </div>
+            <div class="footer-right-content">
+                <ul>
+                    <li>
+                        <div id="customer-service" class="footer">
+                            <h2>Customer Service</h2>
+                            <a href="">Contact Us</a>
+                            <a href="">Track your Order</a>
+                            <a href="">Shipping & Return</a>
+                            <a href="">Frequently Asked Questions</a>
+                            <a href="">Schedule an appointment</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="about-us" class="footer">
+                            <h2>About Us</h2>
+                            <a href="">Origins</a>
+                            <a href="">Our Purpose</a>
+                            <a href="">Careers</a>
+                            <a href="">Sustainability</a>
+                            <a href="">Giving back</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="material-care" class="footer">
+                            <h2>Material Care</h2>
+                            <a href="">Jewelry Repair</a>
+                            <a href="">Ring Sizing</a>
+                            <a href="">Metal Allergy Resources</a>
+                            <a href="">Styling Tips</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="group-member" class="footer">
+                            <h2>Group Member</h2>
+                            <p>Nguyen Ngoc Tu Anh</p>
+                            <p>Le Thi Huyen Trang</p>
+                            <p>Nguyen Van Nhan</p>
+                            <p>Nguyen Van Vien</p>
+                            <p>Nguyen Van Bao</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="footer-bottom-right-content">
+
+                </div>
+            </div>
+            <!-- <article>
+                    <div id="additional-informations" class="footer">
+                        <a href="">APOLLONIAN,</a>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Terms of Use</a>
+                        <a href="">Sitemap</a>
+                        <a href="">Do not sell my information</a>
+                        <a href="">Cookies</a>
+                    </div>
+                </article> -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
