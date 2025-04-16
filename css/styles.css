@@ -409,6 +409,9 @@ p {
 .content-popular {
     background-color: #AA9D84;
     padding-bottom: 70px;
+    /* background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease; */
 }
 
 
@@ -456,6 +459,8 @@ p {
 
 
 
+
+
 .content-danhmuc {
     background: #C6C3A6;
 }
@@ -488,16 +493,29 @@ h1 {
     margin-right: auto;
 }
 
+
+
+
+
 /* .grid-item {
     background: white;
    /* // padding: 10px; */
 /* border-radius: 5px; */
-
+.grid-item {
+    position: relative;
+    overflow: hidden; /* Ẩn phần hình ảnh bị phóng to ra ngoài */
+}
 .grid-item img {
     width: 100%;
     border-radius: 0px;
+    height: auto;
+    transition: transform 0.2s ease; /* Hiệu ứng mượt mà khi zoom */
+    transform-origin: center; 
+    
 }
-
+.grid-item:hover img{
+    transform: scale(2); /* Phóng to hình ảnh khi hover */
+}
 .grid-item.text {
     display: flex;
     align-items: center;
@@ -557,6 +575,23 @@ h1 {
     width: 350px;
     height: 330px;
 }
+
+.loop {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    pointer-events: none; /* Rất quan trọng: không chặn thao tác Swiper */
+    display: none;
+    z-index: 10; /* Cao hơn ảnh nhưng không cao hơn Swiper */
+    background-repeat: no-repeat;
+    border: 2px solid #ccc;
+  }
+  
+
+
+
+
 
 
 #content-bestseller {
@@ -727,8 +762,7 @@ h2[class="card-title"] {
     }
 
 }
-
-#content-subscribe {
+#content-subscribe{
     width: 100%;
     height: 80vh;
     background: linear-gradient(45deg, #2E394B, #3C4B62);
