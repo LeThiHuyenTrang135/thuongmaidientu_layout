@@ -1256,6 +1256,10 @@ h5.sum-rating {
     background-color: var(--white_a700);
 }
 
+.related-products{
+    
+}
+
 input.quantity-number::-webkit-outer-spin-button,
 input.quantity-number::-webkit-inner-spin-button {
     -webkit-appearance: none;
