@@ -6,11 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slider</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer_style.css">
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="fontawesome/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kings&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -26,7 +42,9 @@
                     <img src="img/logo.jpg" alt="Lustria Logo">
                 </div>
                 <div class="right">
-                    <a href="#">Log in / Register</a>
+                    <a href="#" class="login-btn">Log in</a>
+                    <a href="" >/</a>
+                    <a href="#" class="register-btn">Register</a>
                     <a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
                     <a href="#"><i class="fas fa-search"></i></a>
                 </div>
@@ -46,28 +64,6 @@
                 </ul>
             </nav>
         </section>
-
-        <!-- <section class="slider-container">
-            <div class="slider" id="slider">
-                <div class="slide">
-                    <img src="img\nen6.jpg" alt="Slide 1">
-
-                    <div class="ad-content">
-                        <h2>Fresh Green Plants</h2>
-                        <p>Bring nature to your home with our beautiful collection.</p>
-                        <button class="shop-btn">Shop All Plants</button>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="img\nen5.jpg" alt="Slide 2">
-                </div>
-                 <div class="slide">
-                <img src="img\nen3.jpg" alt="Slide 3">
-            </div> -->
-        <!-- </div>
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
-        </section> -->
     </header>
 
     <main>
@@ -82,7 +78,7 @@
                     <div class="ad-content">
                         <h2>| WELCOME TO GL JEWELRY</h2>
                         <p>"Premium Silver – Timeless Beauty That Lasts."</p>
-                        <button class="shop-btn">Shop All Plants</button>
+                        <button class="shop-btn">EXPLORE  -></button>
                     </div>
 
                 </figcaption>
@@ -94,7 +90,7 @@
 
 
         <section class="content">
-            <h2>CHÀO MỪNG ĐẾN VỚI GIỌT LỆ JEWELRY</h2>
+            <h2>WELCOME TO GL JEWELR</h2>
             <p>
                 "Thế giới trang sức bạc tinh tế, nơi vẻ đẹp thanh lịch hòa quyện cùng sự sang trọng. Như Audrey Hepburn
                 từng nói: 'Sự thanh lịch là vẻ đẹp duy nhất không bao giờ phai tàn.' Hãy để Hãy để Giọt lệ Jewelry đồng
@@ -116,14 +112,23 @@
                 </div>
             </div>
         </section>
-
         <section class="content-popular">
             <div class="container">
                 <h2>Popular Jewellery For You</h2>
                 <p>There who like to look good</p>
                 <div class="images">
-                    <img src="img/dchuyen1.jpg" alt="dchuyen" class="image1">
-                    <img src="img/vtay1.jpg" alt="vtay" class="image2">
+                    <div class="image-wrapper 1">
+                        <img src="img/dchuyen1.jpg" alt="dchuyen" class="image1">
+                        <div class="overlay">
+                            <a href="#" class="view-button">Xem sản phẩm</a>
+                        </div>
+                    </div>
+                    <div class="image-wrapper 2">
+                        <img src="img/vtay1.jpg" alt="vtay" class="image2">
+                        <div class="overlay">
+                            <a href="#" class="view-button">Xem sản phẩm</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -251,56 +256,63 @@
             <figrue id="img-subscribe">
                 <img src="img/nen7.jpg" alt="subscribe-img" class="image3">
             </figrue>
+            <div id="snow-container"></div>
         </section>
 
     </main>
 
     <footer>
-        <section>
-            <div id="footer-content">
-                <article>
-                    <div id="logo"></div>
-                </article>
-                <article>
-                    <div id="customer-service" class="footer">
-                        <h2>Customer Service</h2>
-                        <a href="">Contact Us</a>
-                        <a href="">Track your Order</a>
-                        <a href="">Shipping & Return</a>
-                        <a href="">Frequently Asked Questions</a>
-                        <a href="">Schedule an appointment</a>
-                    </div>
-                </article>
-                <article>
-                    <div id="about-us" class="footer">
-                        <h2>About Us</h2>
-                        <a href="">Origins</a>
-                        <a href="">Our Purpose</a>
-                        <a href="">Careers</a>
-                        <a href="">Sustainability</a>
-                        <a href="">Giving back</a>
-                    </div>
-                </article>
-                <article>
-                    <div id="material-care" class="footer">
-                        <h2>Material Care</h2>
-                        <a href="">Jewelry Repair</a>
-                        <a href="">Ring Sizing</a>
-                        <a href="">Metal Allergy Resources</a>
-                        <a href="">Styling Tips</a>
-                    </div>
-                </article>
-                <article>
-                    <div id="group-member" class="footer">
-                        <h2>Group Member</h2>
-                        <p>Nguyen Ngoc Tu Anh</p>
-                        <p>Le Thi Huyen Trang</p>
-                        <p>Nguyen Van Nhan</p>
-                        <p>Nguyen Van Vien</p>
-                        <p>Nguyen Van Bao</p>
-                    </div>
-                </article>
-                <!-- <article>
+        <div id="footer-content">
+            <div class="footer-left-content">
+                <img class="logo-footer" src="img/ico_footer.svg" />
+            </div>
+            <div class="footer-right-content">
+                <ul>
+                    <li>
+                        <div id="customer-service" class="footer">
+                            <h2>Customer Service</h2>
+                            <a href="">Contact Us</a>
+                            <a href="">Track your Order</a>
+                            <a href="">Shipping & Return</a>
+                            <a href="">Frequently Asked Questions</a>
+                            <a href="">Schedule an appointment</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="about-us" class="footer">
+                            <h2>About Us</h2>
+                            <a href="">Origins</a>
+                            <a href="">Our Purpose</a>
+                            <a href="">Careers</a>
+                            <a href="">Sustainability</a>
+                            <a href="">Giving back</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="material-care" class="footer">
+                            <h2>Material Care</h2>
+                            <a href="">Jewelry Repair</a>
+                            <a href="">Ring Sizing</a>
+                            <a href="">Metal Allergy Resources</a>
+                            <a href="">Styling Tips</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="group-member" class="footer">
+                            <h2>Group Member</h2>
+                            <p>Nguyen Ngoc Tu Anh</p>
+                            <p>Le Thi Huyen Trang</p>
+                            <p>Nguyen Van Nhan</p>
+                            <p>Nguyen Van Vien</p>
+                            <p>Nguyen Van Bao</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="footer-bottom-right-content">
+
+                </div>
+            </div>
+            <!-- <article>
                     <div id="additional-informations" class="footer">
                         <a href="">APOLLONIAN,</a>
                         <a href="">Privacy Policy</a>
@@ -310,8 +322,7 @@
                         <a href="">Cookies</a>
                     </div>
                 </article> -->
-            </div>
-        </section>
+        </div>
     </footer>
 
     <script src="script.js"></script>
