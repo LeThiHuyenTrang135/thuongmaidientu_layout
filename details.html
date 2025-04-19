@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider</title>
+    <title>GL Jewelry</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/footer_style.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="fontawesome/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
     <link rel="stylesheet"
@@ -60,22 +59,24 @@
     <main>
         <div class="page-header display-flex">
             <h1 class="normal-font align-left flex-1">Shop</h1>
-            <p><span class="color-light-gray">Trang chủ > </span>Dây chuyền bạc đính pha lê Aurora mặt trăng</p>
+            <p><span class="color-light-gray">Home</span> <span> > </span>Sterling Silver Aurora Moon Necklace</p>
         </div>
         <div class="page-main-content">
             <div class="main-left-content">
-                <img class="main-img" src="img/dchuyen3.png" />
+                <div class="main-img-wrapper">
+                    <img class="main-img" src="img/dchuyen3.png" />
+                </div>
                 <ul class="display-flex justify-space-around">
-                    <li><img class="sub-img" src="img/dchuyen_nho_1.png" /></li>
+                    <li><img class="sub-img" src="img/dchuyen3.png" /></li>
                     <li><img class="sub-img" src="img/dchuyen_nho_2.png" /></li>
-                    <li><img class="sub-img" src="img/dchuyen1.jpg" /></li>
+                    <li><img class="sub-img" src="img/dchuyen_nho_4.png" /></li>
                     <li><img class="sub-img" src="img/dchuyen2.jpg" /></li>
                 </ul>
             </div>
             <div class="main-right-content">
-                <p class="back-to-selection">Quay lại</p>
-                <h3 class="product-name">Dây chuyền bạc đính pha lê Aurora mặt trăng</h3>
-                <img class="ico ico-favorite" src="img/ico_heart.svg" />
+                <a class="back-to-selection" href="#">Back</a>
+                <h3 class="product-name">Sterling Silver Aurora Moon Necklace</h3>
+                <img class="ico ico-favorite" src="img/ico_heart.png" />
                 <p class="product-price">982.000đ</p>
                 <div class="product-size-section display-flex">
                     <p>Size: </p>
@@ -88,15 +89,15 @@
                 <div class="product-quantity-add-to-cart-section display-flex">
                     <div class="product-quantity display-flex">
                         <span class="btn minus-qty-btn" id="minus-qty"><img src="img/ico_minus.svg"></span>
-                        <input class="quantity-number" type="number" value="1" />
+                        <input class="quantity-number" id="qty-number" type="number" value="1" />
                         <span class="btn plus-qty-btn" id="plus-qty"><img src="img/ico_plus.svg" /></span>
                     </div>
                     <button class="btn add-to-cart-btn">
-                        Thêm vào giỏ hàng
+                        Add to cart
                     </button>
                 </div>
                 <div class="category-section border-bottom width-100 display-flex">
-                    <h3>Danh mục: </h3>
+                    <h3>Categories: </h3>
                     <ul class="category-list display-flex">
                         <li>Dây chuyền</li>
                     </ul>
@@ -109,7 +110,7 @@
                     </ul>
                 </div>
                 <div class="share-section border-bottom width-100 display-flex">
-                    <h3>Chia sẻ: </h3>
+                    <h3>Share: </h3>
                     <ul class="share-list display-flex">
                         <li><i class="fa fa-facebook"></i></li>
                         <li><i class="fa fa-instagram"></i></li>
@@ -121,12 +122,13 @@
         <div class="product-describe-rating">
             <div class="product-tab" id="product-tab">
                 <ul class="tab-nav">
-                    <li>Mô tả</li>
-                    <li class="active">Đánh giá</li>
+                    <li class="active">Description</li>
+                    <div class="moving-border"></div>
+                    <li>Reviews</li>
                 </ul>
             </div>
             <div class="product-tab-content-section">
-                <div id="tab-describe" class="product-tab-content display-none">
+                <div id="tab-describe" class="product-tab-content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis pretium augue vitae
                         sagittis. In vitae sem eu sapien cursus eleifend ac in nisi.
                         <br />
@@ -140,7 +142,7 @@
                     </p>
                 </div>
 
-                <div id="tab-rating" class="product-tab-content">
+                <div id="tab-rating" class="product-tab-content display-none">
                     <div class="rating-header">
                         <div class="rating-header-left">
                             <h4 class="mean-rating-points">4.0</h4>
@@ -283,6 +285,99 @@
                 </div>
             </div>
         </div>
+        <div class="related-products">
+            <h2>Related products</h2>
+            <div class="container swiper">
+                <div class="card-wrapper">
+                    <ul class="card-list swiper-wrapper">
+                        <li class="card-item swiper-slide">
+                            <a href="#" class="card-link magnetic">
+                                <div class="card-inner">
+                                    <img src="img/dchuyen1.jpg" alt="..." class="card-image">
+                                    <p class="badge dchuyen1">Dây chuyền A đại dương</p>
+                                    <h2 class="card-title">Dây chuyền A đại dương</h2>
+                                    <h3 class="card-title">580.000 đ</h3>
+                                    <button class="card-button material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </button>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a href="#" class="card-link magnetic">
+                                <div class="card-inner">
+                                    <img src="img/dchuyen2.jpg" alt="Dây chuyền A đại dương" class="card-image">
+                                    <p class="badge dchuyen2">Dây chuyền A đại dương</p>
+                                    <h2 class="card-title">Dây chuyền A đại dương</h2>
+                                    <h3 class="card-title">580.000 đ</h3>
+                                    <button class="card-button material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a href="#" class="card-link magnetic">
+                                <div class="card-inner">
+                                    <img src="img/nhan_1.png" alt="Dây chuyền A đại dương" class="card-image">
+                                    <p class="badge nhan_1">Dây chuyền A đại dương</p>
+                                    <h2 class="card-title">Dây chuyền A đại dương</h2>
+                                    <h3 class="card-title">580.000 đ</h3>
+                                    <button class="card-button material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a href="#" class="card-link magnetic">
+                                <div class="card-inner">
+                                    <img src="img/vtay2.jpg" alt="Dây chuyền A đại dương" class="card-image">
+                                    <p class="badge vtay2">Dây chuyền A đại dương</p>
+                                    <h2 class="card-title">Dây chuyền A đại dương</h2>
+                                    <h3 class="card-title">580.000 đ</h3>
+                                    <button class="card-button material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a href="#" class="card-link magnetic">
+                                <div class="card-inner">
+                                    <img src="img/vtay1.jpg" alt="Dây chuyền A đại dương" class="card-image">
+                                    <p class="badge vtay1">Dây chuyền A đại dương</p>
+                                    <h2 class="card-title">Dây chuyền A đại dương</h2>
+                                    <h3 class="card-title">580.000 đ</h3>
+                                    <button class="card-button material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a href="#" class="card-link magnetic">
+                                <div class="card-inner">
+                                    <img src="img/ktai1.jpg" alt="Dây chuyền A đại dương" class="card-image">
+                                    <p class="badge ktai1">Dây chuyền A đại dương</p>
+                                    <h2 class="card-title">Dây chuyền A đại dương</h2>
+                                    <h3 class="card-title">580.000 đ</h3>
+                                    <button class="card-button material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                </div>
+
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -349,6 +444,10 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="js/add_to_favorite.js"></script>
+    <!-- <script src="js/related_produdct_slider.js"></script> -->
+    <script src="js/clicking_effects.js"></script>
+
 </body>
