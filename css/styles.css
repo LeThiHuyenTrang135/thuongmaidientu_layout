@@ -503,19 +503,25 @@ h1 {
 /* border-radius: 5px; */
 .grid-item {
     position: relative;
-    overflow: hidden; /* Ẩn phần hình ảnh bị phóng to ra ngoài */
+    overflow: hidden;
+    /* Ẩn phần hình ảnh bị phóng to ra ngoài */
 }
+
 .grid-item img {
     width: 100%;
     border-radius: 0px;
     height: auto;
-    transition: transform 0.2s ease; /* Hiệu ứng mượt mà khi zoom */
-    transform-origin: center; 
-    
+    transition: transform 0.2s ease;
+    /* Hiệu ứng mượt mà khi zoom */
+    transform-origin: center;
+
 }
-.grid-item:hover img{
-    transform: scale(2); /* Phóng to hình ảnh khi hover */
+
+.grid-item:hover img {
+    transform: scale(2);
+    /* Phóng to hình ảnh khi hover */
 }
+
 .grid-item.text {
     display: flex;
     align-items: center;
@@ -581,17 +587,14 @@ h1 {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    pointer-events: none; /* Rất quan trọng: không chặn thao tác Swiper */
+    pointer-events: none;
+    /* Rất quan trọng: không chặn thao tác Swiper */
     display: none;
-    z-index: 10; /* Cao hơn ảnh nhưng không cao hơn Swiper */
+    z-index: 10;
+    /* Cao hơn ảnh nhưng không cao hơn Swiper */
     background-repeat: no-repeat;
     border: 2px solid #ccc;
-  }
-  
-
-
-
-
+}
 
 
 #content-bestseller {
@@ -742,7 +745,6 @@ h2[class="card-title"] {
 }
 
 .card-wrapper .swiper-pagination-bullet-active {
-
     opacity: 1;
 }
 
@@ -762,7 +764,8 @@ h2[class="card-title"] {
     }
 
 }
-#content-subscribe{
+
+#content-subscribe {
     width: 100%;
     height: 80vh;
     background: linear-gradient(45deg, #2E394B, #3C4B62);
@@ -837,7 +840,8 @@ h2[class="card-title"] {
 .page-header {
     background-color: white !important;
     display: block;
-    padding: 30px 50px;
+    /* padding: 30px 50px; */
+    padding: 15px 100px;
     transition: all 0.3s ease 0s;
 }
 
@@ -878,7 +882,6 @@ h2[class="card-title"] {
     padding: 50px;
     display: flex;
     gap: 46px;
-    transition: all 0.3s ease 0s;
 }
 
 .main-left-content {
@@ -889,9 +892,19 @@ h2[class="card-title"] {
     gap: 20px;
 }
 
+.main-img-wrapper {
+    height: 566px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
 .main-img {
     object-fit: cover;
-    height: 566px;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.5s ease;
     border-radius: 14px;
 }
 
@@ -911,17 +924,16 @@ h2[class="card-title"] {
 }
 
 .back-to-selection {
-    align-self: flex-start;
+    width: auto;
     color: var(--gray_800_03);
     font-size: 16px;
     font-weight: 400;
-    margin: 10px 0 0 0;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .back-to-selection:hover {
     text-decoration: underline;
-    cursor: pointer;
-    color: var(--gray_600_01);
 }
 
 .product-name {
@@ -935,14 +947,12 @@ h2[class="card-title"] {
 }
 
 .ico {
-    height: 48px;
-
+    height: 33px;
 }
 
 .ico-favorite {
     align-self: flex-end;
     margin-right: 34px;
-
 }
 
 .product-price {
@@ -1029,7 +1039,7 @@ span.plus-qty-btn {
     padding: 10px;
     margin-top: 28px;
     height: 42px;
-    width: 200px;
+    width: 150px;
     font-size: 16px;
     color: var(--white_a700);
     border: none;
@@ -1107,10 +1117,36 @@ input.quantity-number {
     cursor: pointer;
 }
 
+.tab-nav {
+    position: relative;
+}
+
+.moving-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: var(--white_a700);
+    transition: all 0.3s ease;
+}
+
+ul.tab-nav li {
+    position: relative;
+    padding-bottom: 5px;
+}
+
 ul.tab-nav li.active {
     color: var(--white_a700);
-    border-bottom: 2px solid var(--white_a700);
-    cursor: auto;
+    /* border-bottom: 2px solid var(--white_a700); */
+}
+
+.moving-border {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 155px;
+    transition: all 0.3s ease;
+    background-color: var(--white_a700);
 }
 
 .product-tab-content {
@@ -1271,6 +1307,21 @@ h5.sum-rating {
 .pagination .selected,
 .pagination a:hover {
     background-color: var(--white_a700);
+}
+
+.related-products {
+    background: linear-gradient(#0e3d46, #295760);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 2em;
+}
+
+.related-products h2 {
+    color: var(--white_a700);
+    text-align: left;
 }
 
 input.quantity-number::-webkit-outer-spin-button,
