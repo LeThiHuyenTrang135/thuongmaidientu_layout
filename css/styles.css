@@ -840,7 +840,7 @@ h2[class="card-title"] {
 .page-header {
     background-color: white !important;
     display: block;
-    /* padding: 30px 50px; */
+    /* padding: 15px 50px; */
     padding: 15px 100px;
     transition: all 0.3s ease 0s;
 }
@@ -879,7 +879,7 @@ h2[class="card-title"] {
 
 .page-main-content {
     background-color: #E9DAD3;
-    padding: 50px;
+    padding: 50px 100px;
     display: flex;
     gap: 46px;
 }
@@ -893,19 +893,68 @@ h2[class="card-title"] {
 }
 
 .main-img-wrapper {
+    position: relative;
     height: 566px;
     width: 100%;
-    position: relative;
     overflow: hidden;
+    border-radius: 14px;
+    background-color: #fff;
+    padding: 0;
 }
 
+
 .main-img {
-    object-fit: cover;
+    display: block;
+    width: 100%;
     height: 100%;
     position: absolute;
-    width: 100%;
-    transition: transform 0.5s ease;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: none;
     border-radius: 14px;
+    transition: transform 0.5s ease;
+    backface-visibility: hidden;
+    will-change: transform;
+    z-index: 1;
+}
+
+
+
+
+.main-img.active {
+    z-index: 2;
+}
+
+.main-img.next {
+    z-index: 1;
+    transform: translateX(100%);
+}
+
+.zoom-img {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    pointer-events: none;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.main-img:hover {
+    cursor: zoom-in;
+}
+
+/* Hiệu ứng zoom khi hover */
+.main-img-wrapper:hover .zoom-img {
+    opacity: 1;
+}
+
+.main-img-wrapper:hover .main-img.active {
+    opacity: 0;
 }
 
 .sub-img {
@@ -989,9 +1038,7 @@ h2[class="card-title"] {
     border-radius: 50%;
     background-color: var(--gray_600_01_30);
     padding: 16px 16px 16px 17px;
-
-    /* thêm animation zô chô này nè  */
-    /* animation: ease 0.5s; */
+    transition: all 0.3s ease;
 }
 
 .product-size-selected {
@@ -1045,6 +1092,11 @@ span.plus-qty-btn {
     border: none;
     border-radius: 10px;
     background-color: var(--gray_600_01);
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #654837;
 }
 
 input.quantity-number {
@@ -1104,7 +1156,7 @@ input.quantity-number {
 
 .product-describe-rating {
     background-color: #AA9D84;
-    padding: 50px;
+    padding: 50px 100px;
     width: 100%;
 }
 
@@ -1122,9 +1174,10 @@ input.quantity-number {
 }
 
 .moving-border {
+    padding: 0 50px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50px;
     height: 2px;
     background-color: var(--white_a700);
     transition: all 0.3s ease;
@@ -1143,6 +1196,7 @@ ul.tab-nav li.active {
 .moving-border {
     position: absolute;
     bottom: 0;
+    left: 0;
     height: 2px;
     width: 155px;
     transition: all 0.3s ease;
