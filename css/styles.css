@@ -178,7 +178,7 @@ a {
 .ad-content h2 {
     font-size: 16px;
     margin-bottom: 10px;
-    color: #74530b;
+    color: #694b0c;
 }
 
 .ad-content p {
@@ -188,7 +188,7 @@ a {
 }
 
 .shop-btn {
-    background: #ff9800;
+    background: #984e19;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -368,6 +368,7 @@ p {
     font-size: 16px;
 
 }
+/* content-popular*/
 
 .content-popular {
     background-color: #AA9D84;
@@ -375,6 +376,15 @@ p {
     /* background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease; */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out; /* Hiệu ứng mượt mà khi thay đổi nền */
+    height: 100vh; /* Đặt chiều cao của section bằng chiều cao màn hình */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -406,7 +416,7 @@ p {
     height: auto;
     border-top-right-radius: 70px;
 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 
 
 }
@@ -416,10 +426,79 @@ p {
     height: auto;
     border-top-left-radius: 70px;
 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     /* Thêm hiệu ứng đổ bóng */
 }
+.container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out; /* Hiệu ứng mượt mà khi thay đổi nền */
+}
 
+.images img {
+    cursor: pointer;
+    width: 400px; /* Đặt kích thước hình ảnh */
+    height: auto;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Hiệu ứng mượt mà khi phóng to */
+}
+
+.images img:hover {
+    transform: scale(1.1); /* Phóng to nhẹ khi hover */
+    filter: brightness(0.5);
+
+}
+.image-wrapper {
+    position: relative;
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+}
+
+/* Overlay hiển thị đè lên hình */
+.image-wrapper .overlay {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.6); */
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Tránh cản sự kiện chuột nếu không cần tương tác */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Khi hover vào hình ảnh thì overlay hiện */
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+.view-button {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    pointer-events: auto;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.view-button:hover {
+    background-color: #167786;
+}
 
 
 
@@ -728,12 +807,48 @@ h2[class="card-title"] {
 
 }
 
+/*content-subscribe*/
+#snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Đảm bảo không cản trở các sự kiện chuột */
+    overflow: hidden;
+    z-index: 1; /* Đặt tuyết phía trên nội dung */
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    opacity: 0.8;
+    animation: fall linear infinite;
+    animation-duration: 3s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
 #content-subscribe {
     width: 100%;
     height: 80vh;
     background: linear-gradient(45deg, #2E394B, #3C4B62);
     opacity: 100%;
     display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
 #content-subscribe div {
@@ -752,6 +867,7 @@ h2[class="card-title"] {
 #subscribe-form h2 {
     color: white;
     margin-inline: auto;
+    padding: 20px;
 }
 
 #subscribe-form form label {
@@ -803,7 +919,7 @@ h2[class="card-title"] {
 .page-header {
     background-color: white !important;
     display: block;
-    /* padding: 30px 50px; */
+    /* padding: 15px 50px; */
     padding: 15px 100px;
     transition: all 0.3s ease 0s;
 }
@@ -842,7 +958,7 @@ h2[class="card-title"] {
 
 .page-main-content {
     background-color: #E9DAD3;
-    padding: 50px;
+    padding: 50px 100px;
     display: flex;
     gap: 46px;
 }
@@ -856,19 +972,68 @@ h2[class="card-title"] {
 }
 
 .main-img-wrapper {
+    position: relative;
     height: 566px;
     width: 100%;
-    position: relative;
     overflow: hidden;
+    border-radius: 14px;
+    background-color: #fff;
+    padding: 0;
 }
 
+
 .main-img {
-    object-fit: cover;
+    display: block;
+    width: 100%;
     height: 100%;
     position: absolute;
-    width: 100%;
-    transition: transform 0.5s ease;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: none;
     border-radius: 14px;
+    transition: transform 0.5s ease;
+    backface-visibility: hidden;
+    will-change: transform;
+    z-index: 1;
+}
+
+
+
+
+.main-img.active {
+    z-index: 2;
+}
+
+.main-img.next {
+    z-index: 1;
+    transform: translateX(100%);
+}
+
+.zoom-img {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    pointer-events: none;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.main-img:hover {
+    cursor: zoom-in;
+}
+
+/* Hiệu ứng zoom khi hover */
+.main-img-wrapper:hover .zoom-img {
+    opacity: 1;
+}
+
+.main-img-wrapper:hover .main-img.active {
+    opacity: 0;
 }
 
 .sub-img {
@@ -952,9 +1117,7 @@ h2[class="card-title"] {
     border-radius: 50%;
     background-color: var(--gray_600_01_30);
     padding: 16px 16px 16px 17px;
-
-    /* thêm animation zô chô này nè  */
-    /* animation: ease 0.5s; */
+    transition: all 0.3s ease;
 }
 
 .product-size-selected {
@@ -1008,6 +1171,11 @@ span.plus-qty-btn {
     border: none;
     border-radius: 10px;
     background-color: var(--gray_600_01);
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #654837;
 }
 
 input.quantity-number {
@@ -1067,7 +1235,7 @@ input.quantity-number {
 
 .product-describe-rating {
     background-color: #AA9D84;
-    padding: 50px;
+    padding: 50px 100px;
     width: 100%;
 }
 
@@ -1085,9 +1253,10 @@ input.quantity-number {
 }
 
 .moving-border {
+    padding: 0 50px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50px;
     height: 2px;
     background-color: var(--white_a700);
     transition: all 0.3s ease;
@@ -1106,6 +1275,7 @@ ul.tab-nav li.active {
 .moving-border {
     position: absolute;
     bottom: 0;
+    left: 0;
     height: 2px;
     width: 155px;
     transition: all 0.3s ease;
@@ -1356,3 +1526,6 @@ footer {
 #material-care {
     margin-top: -20%;
 }
+
+
+

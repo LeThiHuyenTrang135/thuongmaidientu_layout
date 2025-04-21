@@ -1,4 +1,4 @@
-
+/*phần slide */
 new Swiper('.card-wrapper', {
 
     loop: true,
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
+/*phần slide */
 document.addEventListener('DOMContentLoaded', () => {
     const cardItems = document.querySelectorAll('.card-item');
 
@@ -95,5 +95,96 @@ document.addEventListener('DOMContentLoaded', () => {
             const link = item.querySelector('.card-link');
             link.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
         });
+    });
+});
+
+/*phần popular */
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.content-popular');
+    const image1 = document.querySelector('.image1');
+    const image2 = document.querySelector('.image2');
+    const buttons = document.querySelectorAll('.view-button');
+
+    // Khi di chuột vào image1
+    image1.addEventListener('mouseenter', () => {
+        container.style.backgroundImage = "url('img/nen10.jpg')";
+    });
+
+    // Khi di chuột vào image2
+    image2.addEventListener('mouseenter', () => {
+        container.style.backgroundImage = "url('img/nen8.jpg')";
+    });
+
+    // Gán sự kiện cho từng button
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            // Kiểm tra button nằm trong image nào để chọn ảnh phù hợp
+            const parentImage = button.closest('.image-wrapper');
+            if (parentImage.querySelector('.image1')) {
+                container.style.backgroundImage = "url('img/nen10.jpg')";
+            } else if (parentImage.querySelector('.image2')) {
+                container.style.backgroundImage = "url('img/nen8.jpg')";
+            }
+        });
+
+        button.addEventListener('mouseleave', () => {
+            container.style.backgroundImage = '';
+        });
+    });
+
+    // Khi chuột rời khỏi image1 hoặc image2 thì reset nền
+    [image1, image2].forEach(image => {
+        image.addEventListener('mouseleave', () => {
+            container.style.backgroundImage = ''; // Xóa nền
+        });
+    });
+});
+/*tuyết rơirơi */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const snowContainer = document.querySelector('#snow-container');
+
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.textContent = '❄'; // Biểu tượng tuyết
+        snowflake.style.left = Math.random() * 100 + 'vw'; // Vị trí ngẫu nhiên theo chiều ngang
+        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // Thời gian rơi ngẫu nhiên (5-10 giây)
+        snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; // Kích thước ngẫu nhiên
+
+        snowContainer.appendChild(snowflake);
+
+        // Xóa hạt tuyết sau khi hoàn thành animation
+        setTimeout(() => {
+            snowflake.remove();
+        }, 10000); // Thời gian sống của hạt tuyết (tương ứng với thời gian rơi)
+    }
+
+    // Tạo hạt tuyết mỗi 500ms
+    setInterval(createSnowflake, 200);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hopBtn = document.querySelector('.shop-btn'); // Chọn nút hop-btn
+    const contentSection = document.querySelector('.content'); // Chọn phần content
+
+    hopBtn.addEventListener('click', () => {
+        const targetPosition = contentSection.getBoundingClientRect().top + window.pageYOffset; // Vị trí của content
+        const startPosition = window.pageYOffset; // Vị trí hiện tại
+        const distance = targetPosition - startPosition; // Khoảng cách cần cuộn
+        const duration = 1000; // Thời gian cuộn (ms)
+        let start = null;
+
+        function smoothScroll(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const ease = Math.min(progress / duration, 1); // Tính toán easing (0 đến 1)
+            window.scrollTo(0, startPosition + distance * ease); // Cuộn đến vị trí
+            if (progress < duration) {
+                requestAnimationFrame(smoothScroll); // Tiếp tục cuộn
+            }
+        }
+
+        requestAnimationFrame(smoothScroll);
     });
 });
