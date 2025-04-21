@@ -20,43 +20,6 @@ body {
 :root {
     /* font */
     --g5-body-font: 'edmondsans', Arial, sans-serif;
-
-    /* màu */
-    --light-gray: #999999;
-    --dark_blue: #274B53;
-    --black_900: #000000;
-    --black_900_89: #00000089;
-    --blue_gray_100: #d9d9d9;
-    --blue_gray_700: #305a62;
-    --blue_gray_800: #264b52;
-    --deep_orange_800_bf: #e23d0fbf;
-    --gray_200: #efefef;
-    --gray_300: #e8dad2;
-    --gray_400: #b6b6b6;
-    --gray_50: #fbfbfb;
-    --gray_500: #989898;
-    --gray_500_01: #b7a990;
-    --gray_500_02: #ababab;
-    --gray_600: #6f6f6f;
-    --gray_600_01: #aa7b61;
-    --gray_600_01_30: #D7BEB1;
-    --gray_700: #646464;
-    --gray_800: #683218;
-    --gray_800_01: #3f3f3f;
-    --gray_800_02: #4c4c4c;
-    --gray_800_03: #505050;
-    --pink_100: #e8cccc;
-    --red_a100_66: #e5927c66;
-    --white_a700: #ffffff;
-    --white_a700_50: #D5CEC2;
-
-
-    /* Khoảng cách */
-    --space-xs: 10px;
-    --space-sm: 14px;
-    --space-md: 20px;
-    --space-lg: 32px;
-    --space-xl: 52px --cherry: #ea6e6e;
 }
 
 li {
