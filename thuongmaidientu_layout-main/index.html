@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css"> 
+</head>
+<body>
+    <header>
+        <header>
+            <div class="top-bar">
+                <div class="left">
+                   
+                    <span class="hotline"><i class="fas fa-phone"></i> <strong>hotline:</strong> (+00) 987 877 821</span>
+                </div>
+                <div class="logo">
+                    <img src="img/logo.jpg" alt="Lustria Logo">
+                </div>
+                <div class="right">
+                    <a href="#">Log in / Register</a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+            <nav class="navbar">
+               
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li>
+                        <a href="">All Catogories</a>			
+                        <ul class="dropdown-menu">
+                            
+                            
+                            <li>
+                                <a  href="">Vòng tay</a>
+                            </li>
+
+                            <li class="left-side">
+                                <a  href="">Dây chuyền <span class="arrow">></span></a>
+                                <ul class="dropdown-menu sm-nowrap">
+                                                            
+                                    <li>
+                                        <a href="">Dây chuyền kim cươg</a>
+                                    </li>						
+                                                            
+                                    <li>
+                                        <a href="">Dây chuyền đá quý</a>
+                                    </li>						
+                                                            
+                                    <li>
+                                        <a href="">Dây chuyền độc</a>
+                                    </li>						
+                                    
+                                </ul>
+                            </li>
+                            
+                            
+                            
+                            <li>
+                                <a  href="">Bông tai</a>
+                            </li>
+                            
+                            
+                            
+                            <li>
+                                <a  href="">Sản phẩm hot</a>
+                            </li>
+                            
+                            
+            
+                        </ul>
+                    </li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Features</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="shop-page-title category-page-title page-title ">
+
+            <div class="page-title-inner flex-row  medium-flex-wrap container">
+              <div class="flex-col flex-grow medium-text-center">
+                        <div class="is-large">
+            <nav class="woocommerce-breadcrumb breadcrumbs"><a href="">Trang chủ</a> <span class="divider">/</span> Dây chuyền</nav></div>
+        <div class="category-filtering category-filter-row show-for-medium">
+            <a href="#" data-open="#shop-sidebar" data-visible-after="true" data-pos="left" class="filter-button uppercase plain">
+                <i class="icon-menu"></i>
+                <strong>Lọc</strong>
+            </a>
+            <div class="inline-block">
+                    </div>
+        </div>
+              </div><!-- .flex-left -->
+              
+               <div class="flex-col medium-text-center">
+                       
+        
+        <p class="woocommerce-result-count hide-for-medium">
+            Hiển thị một kết quả duy nhất</p>
+        <form class="woocommerce-ordering" method="get">
+            <select name="orderby" class="orderby">
+                            <option value="menu_order" selected="selected">Thứ tự mặc định</option>
+                            <option value="popularity">Thứ tự theo mức độ phổ biến</option>
+                            <option value="rating">Thứ tự theo điểm đánh giá</option>
+                            <option value="date">Mới nhất</option>
+                            <option value="price">Thứ tự theo giá: thấp đến cao</option>
+                            <option value="price-desc">Thứ tự theo giá: cao xuống thấp</option>
+                    </select>
+            <input type="hidden" name="paged" value="1">
+            </form>
+               </div><!-- .flex-right -->
+               
+            </div><!-- flex-row -->
+        </div>
+        <main id="main" class="">
+            <div class="row category-page-row">
+            
+                    <div class="col large-3 hide-for-medium ">
+                        <div id="shop-sidebar" class="sidebar-inner col-inner">
+                            <aside id="woocommerce_product_categories-3" class="widget woocommerce widget_product_categories"><span class="widget-title shop-sidebar">Danh mục sản phẩm</span><div class="is-divider small"></div><ul class="product-categories"><li class="cat-item cat-item-40"><a href="">Bông tai</a></li>
+            <li class="cat-item cat-item-42 current-cat active"><a href="">Dây chuyền</a></li>
+            <li class="cat-item cat-item-43"><a href="">Lắc tay</a></li>
+            <li class="cat-item cat-item-41"><a href="">Nhẫn bạc</a></li>
+            </ul></aside><aside id="woocommerce_price_filter-2" class="widget woocommerce widget_price_filter"><span class="widget-title shop-sidebar">Lọc theo giá</span><div class="is-divider small"></div><form method="get" action="">
+                        <div class="price_slider_wrapper">
+                            <div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style=""><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 88.2129%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 88.2129%;"></span></div>
+                            <div class="price_slider_amount">
+                                <input type="text" id="min_price" name="min_price" value="819000" data-min="819000" placeholder="Giá thấp nhất" style="display: none;">
+                                <input type="text" id="max_price" name="max_price" value="423150000" data-max="423150000" placeholder="Giá cao nhất" style="display: none;">
+                                <button type="submit" class="button">Lọc</button>
+                                <div class="price_label" >
+                                    Giá <span class="from">819,000&nbsp;₫</span> — <span class="to">373,369,515&nbsp;₫</span>
+                                </div>
+                                
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </form></aside><aside id="woocommerce_products-3" class="widget woocommerce widget_products"><span class="widget-title shop-sidebar">Quan tâm</span><div class="is-divider small"></div><ul class="product_list_widget"><li>
+                
+                <a href="https://mauweb.monamedia.net/karojewelry/san-pham/a-2/">
+                    <img width="100" height="100" src="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/12/2-100x100.png" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="">		<span class="product-title">Vòng cổ tím huyền bí</span>
+                </a>
+            
+                            
+                <del><span class="woocommerce-Price-amount amount">5,000,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></del> <ins><span class="woocommerce-Price-amount amount">3,250,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></ins>
+                </li>
+            <li>
+                
+                <a href="https://mauweb.monamedia.net/karojewelry/san-pham/a/">
+                    <img width="100" height="100" src="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/12/1-100x100.png" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="">		<span class="product-title">Dây chuyền trái tim đại dương</span>
+                </a>
+            
+                            
+                <del><span class="woocommerce-Price-amount amount">5,000,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></del> <ins><span class="woocommerce-Price-amount amount">3,500,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></ins>
+                </li>
+            <li>
+                
+                <a href="https://mauweb.monamedia.net/karojewelry/san-pham/bong-tai-pnj-vang-hong/">
+                    <img width="100" height="100" src="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/12/8.x90079-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="">		<span class="product-title">BÔNG TAI PNJ VÀNG HỒNG</span>
+                </a>
+            
+                            
+                <del><span class="woocommerce-Price-amount amount">5,000,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></del> <ins><span class="woocommerce-Price-amount amount">3,500,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></ins>
+                </li>
+            <li>
+                
+                <a href="https://mauweb.monamedia.net/karojewelry/san-pham/bulova-corporation-automatic-mens-watch-49mm/">
+                    <img width="100" height="100" src="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/21.x90079-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="">		<span class="product-title">BULOVA CORPORATION AUTOMATIC MEN'S WATCH 49MM</span>
+                </a>
+            
+                            
+                <del><span class="woocommerce-Price-amount amount">15,400,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></del> <ins><span class="woocommerce-Price-amount amount">14,000,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></ins>
+                </li>
+            </ul></aside>			</div><!-- .sidebar-inner -->
+                    </div><!-- #shop-sidebar -->
+            
+                    <div class="col large-9">
+                    <div class="shop-container">
+                    
+                    <div class="woocommerce-notices-wrapper"></div>	<div class="products row row-small large-columns-3 medium-columns-3 small-columns-2 has-shadow row-box-shadow-1 row-box-shadow-2-hover">
+                
+            <div class="product-small col has-hover post-560 product type-product status-publish has-post-thumbnail product_cat-day-chuyen first instock sale shipping-taxable purchasable product-type-simple">
+                <div class="col-inner">
+
+
+                <div class="product-small box ">
+                    <div class="box-image">
+                        <div class="image-fade_in_back">
+                            <a href="https://mauweb.monamedia.net/karojewelry/san-pham/frederique-constant-fc-312v4s4-slimline-auto-watch-40mm/">
+                                <img width="480" height="480" src="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/4-1-480x480.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/4-1-480x480.jpg 480w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/4-1-150x150.jpg 150w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/4-1-300x300.jpg 300w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/4-1.jpg 600w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/4-1-100x100.jpg 100w" sizes="(max-width: 480px) 100vw, 480px">
+                        </div>
+                        <div class="image-tools is-small top right show-on-hover">
+                                        </div>
+                        <div class="image-tools is-small hide-for-small bottom left show-on-hover">
+                                        </div>
+                        <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                            <a rel="nofollow" href="/karojewelry/danh-muc/day-chuyen/?add-to-cart=560" data-quantity="1" data-product_id="560" data-product_sku="76840" class="ajax_add_to_cart add_to_cart_button add-to-cart-grid no-padding" style="width:0;display:block">
+                        <div class="cart-icon tooltip absolute is-small tooltipstered"><strong>+</strong></div></a>			</div>
+                                </div><!-- box-image -->
+            
+                    <div class="box-text box-text-products text-center grid-style-2">
+                        <div class="title-wrapper"><p class="name product-title"><a href="https://mauweb.monamedia.net/karojewelry/san-pham/frederique-constant-fc-312v4s4-slimline-auto-watch-40mm/">FREDERIQUE CONSTANT FC-312V4S4 SLIMLINE AUTO WATCH 40MM</a></p></div><div class="price-wrapper">
+                <span class="price"><del><span class="woocommerce-Price-amount amount">50,790,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></del> <ins><span class="woocommerce-Price-amount amount">5,079,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></ins></span>
+            </div>		</div><!-- box-text -->
+                </div><!-- box -->
+                    </div><!-- .col-inner -->
+            </div><!-- col -->
+            
+            <div class="product-small col has-hover post-558 product type-product status-publish has-post-thumbnail product_cat-day-chuyen instock sale shipping-taxable purchasable product-type-simple">
+                <div class="col-inner">
+                
+
+                <div class="product-small box ">
+                    <div class="box-image">
+                        <div class="image-fade_in_back">
+                            <a href="https://mauweb.monamedia.net/karojewelry/san-pham/michael-kors-lauryn-celestial-pave-plum-tone-38mm/">
+                                <img width="480" height="480" src="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-480x480.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-480x480.png 480w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-150x150.png 150w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-300x300.png 300w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-768x768.png 768w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-1024x1024.png 1024w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-600x600.png 600w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-100x100.png 100w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7.png 1280w" sizes="(max-width: 480px) 100vw, 480px">
+                                                    </div>
+                        <div class="image-tools is-small top right show-on-hover">
+                                        </div>
+                        <div class="image-tools is-small hide-for-small bottom left show-on-hover">
+                                        </div>
+                        <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                            <a rel="nofollow" href="/karojewelry/danh-muc/day-chuyen/?add-to-cart=558" data-quantity="1" data-product_id="558" data-product_sku="74347" class="ajax_add_to_cart add_to_cart_button add-to-cart-grid no-padding" style="width:0;display:block">
+                        <div class="cart-icon tooltip absolute is-small tooltipstered"><strong>+</strong></div></a>			</div>
+                                </div><!-- box-image -->
+            
+                    <div class="box-text box-text-products text-center grid-style-2">
+                        <div class="title-wrapper"><p class="name product-title"><a href="https://mauweb.monamedia.net/karojewelry/san-pham/michael-kors-lauryn-celestial-pave-plum-tone-38mm/">MICHAEL KORS LAURYN CELESTIAL PAVÉ PLUM-TONE 38MM</a></p></div><div class="price-wrapper">
+                <span class="price"><del><span class="woocommerce-Price-amount amount">7,120,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></del> <ins><span class="woocommerce-Price-amount amount">819,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></ins></span>
+            </div>		</div><!-- box-text -->
+                </div><!-- box -->
+                    </div><!-- .col-inner -->
+            </div><!-- col -->
+            
+            <div class="product-small col has-hover post-559 product type-product status-publish has-post-thumbnail product_cat-day-chuyen last instock sale shipping-taxable purchasable product-type-simple">
+                <div class="col-inner">
+
+                <div class="product-small box ">
+                    <div class="box-image">
+                        <div class="image-fade_in_back">
+                            <a href="">
+                                <img width="480" height="480" src="" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/1-1-480x480.png 480w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/1-1-150x150.png 150w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/1-1-300x300.png 300w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/1-1-768x768.png 768w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/1-1-600x600.png 600w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/1-1-100x100.png 100w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/1-1.png 1024w" sizes="(max-width: 480px) 100vw, 480px">
+                        </div>
+                        <div class="image-tools is-small top right show-on-hover">
+                                        </div>
+                        <div class="image-tools is-small hide-for-small bottom left show-on-hover">
+                                        </div>
+                        <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                            <a rel="nofollow" href="" data-quantity="1" data-product_id="559" data-product_sku="74344" class="ajax_add_to_cart add_to_cart_button add-to-cart-grid no-padding" style="width:0;display:block">
+                        <div class="cart-icon tooltip absolute is-small tooltipstered"><strong>+</strong></div></a>			</div>
+                                </div><!-- box-image -->
+            
+                    <div class="box-text box-text-products text-center grid-style-2">
+                        <div class="title-wrapper"><p class="name product-title"><a href="https://mauweb.monamedia.net/karojewelry/san-pham/movado-museum-70th-anniversary-special-edition-watch-35mm/">MOVADO MUSEUM 70TH ANNIVERSARY SPECIAL EDITION WATCH 35MM</a></p></div><div class="price-wrapper">
+                <span class="price"><del><span class="woocommerce-Price-amount amount">18,330,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></del> <ins><span class="woocommerce-Price-amount amount">8,330,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></ins></span>
+            </div>		</div><!-- box-text -->
+                </div><!-- box -->
+                    </div><!-- .col-inner -->
+            </div><!-- col -->
+            
+            <div class="product-small col has-hover post-557 product type-product status-publish has-post-thumbnail product_cat-day-chuyen first instock shipping-taxable purchasable product-type-simple">
+                <div class="col-inner">
+                
+            <div class="badge-container absolute left top z-1">
+            </div>
+                <div class="product-small box ">
+                    <div class="box-image">
+                        <div class="image-fade_in_back">
+                            <a href="https://mauweb.monamedia.net/karojewelry/san-pham/omega-seamaster-aqua-terra-watch-34mm/">
+                                <img width="480" height="480" src="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/10-480x480.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/10-480x480.png 480w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/10-150x150.png 150w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/10-100x100.png 100w" sizes="(max-width: 480px) 100vw, 480px">
+                        </div>
+                        <div class="image-tools is-small top right show-on-hover">
+                                        </div>
+                        <div class="image-tools is-small hide-for-small bottom left show-on-hover">
+                                        </div>
+                        <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                            <a rel="nofollow" href="/karojewelry/danh-muc/day-chuyen/?add-to-cart=557" data-quantity="1" data-product_id="557" data-product_sku="82431" class="ajax_add_to_cart add_to_cart_button add-to-cart-grid no-padding" style="width:0;display:block">
+                        <div class="cart-icon tooltip absolute is-small tooltipstered"><strong>+</strong></div></a>			</div>
+                                </div><!-- box-image -->
+            
+                    <div class="box-text box-text-products text-center grid-style-2">
+                        <div class="title-wrapper"><p class="name product-title"><a href="https://mauweb.monamedia.net/karojewelry/san-pham/omega-seamaster-aqua-terra-watch-34mm/">OMEGA SEAMASTER AQUA TERRA WATCH 34MM</a></p></div><div class="price-wrapper">
+                <span class="price"><span class="woocommerce-Price-amount amount">423,150,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></span>
+            </div>		</div><!-- box-text -->
+                </div><!-- box -->
+                    </div><!-- .col-inner -->
+            </div><!-- col -->
+            
+            <div class="product-small col has-hover post-556 product type-product status-publish has-post-thumbnail product_cat-day-chuyen instock shipping-taxable purchasable product-type-simple">
+                <div class="col-inner">
+                
+            <div class="badge-container absolute left top z-1">
+            </div>
+                <div class="product-small box ">
+                    <div class="box-image">
+                        <div class="image-fade_in_back">
+                            <a href="https://mauweb.monamedia.net/karojewelry/san-pham/versace-vanitas-rose-gold-watch-40mm/">
+                                <img width="480" height="480" src="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-480x480.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-480x480.png 480w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-150x150.png 150w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-300x300.png 300w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-768x768.png 768w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-1024x1024.png 1024w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-600x600.png 600w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7-100x100.png 100w, https://mauweb.monamedia.net/karojewelry/wp-content/uploads/2018/11/7.png 1280w" sizes="(max-width: 480px) 100vw, 480px">
+                        </div>
+                        <div class="image-tools is-small top right show-on-hover">
+                                        </div>
+                        <div class="image-tools is-small hide-for-small bottom left show-on-hover">
+                                        </div>
+                        <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
+                            <a rel="nofollow" href="/karojewelry/danh-muc/day-chuyen/?add-to-cart=556" data-quantity="1" data-product_id="556" data-product_sku="77242" class="ajax_add_to_cart add_to_cart_button add-to-cart-grid no-padding" style="width:0;display:block">
+                        <div class="cart-icon tooltip absolute is-small tooltipstered"><strong>+</strong></div></a>			</div>
+                                </div><!-- box-image -->
+            
+                    <div class="box-text box-text-products text-center grid-style-2">
+                        <div class="title-wrapper"><p class="name product-title"><a href="https://mauweb.monamedia.net/karojewelry/san-pham/versace-vanitas-rose-gold-watch-40mm/">VERSACE VANITAS ROSE GOLD WATCH 40MM</a></p></div><div class="price-wrapper">
+                <span class="price"><span class="woocommerce-Price-amount amount">38,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></span>
+            </div>		</div><!-- box-text -->
+                </div><!-- box -->
+                    </div><!-- .col-inner -->
+            </div><!-- col -->
+            </div><!-- row -->
+                    </div><!-- shop container -->
+                    </div>
+            </div>
+            
+            </main>
+    <script src="script.js"></script>
+
+</body>
+  
+</html>
