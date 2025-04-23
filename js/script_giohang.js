@@ -42,3 +42,12 @@ function closeCart() {
     document.getElementById('sidebar-cart').classList.remove('active');
     document.getElementById('cart-overlay').classList.remove('active');
 }
+
+/**Thanh toán */
+document.addEventListener('DOMContentLoaded', () => {
+    const checkoutButton = document.querySelector('.checkout'); // Chọn nút Thanh toán
+
+    checkoutButton.addEventListener('click', () => {
+        window.location.href = 'thanhtoan.html'; // Chuyển hướng đến thanhtoan.html
+    });
+});
