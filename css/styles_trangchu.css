@@ -734,6 +734,8 @@ h2[class="card-title"] {
     background: linear-gradient(45deg, #2E394B, #3C4B62);
     opacity: 100%;
     display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
 #content-subscribe div {
@@ -799,67 +801,34 @@ h2[class="card-title"] {
     max-width: 750px;
     max-height: 500px;
 }
-
-/* footer */
-#footer-content {
-    display: flex;
-    height: 100%;
+#snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-#footer-content ul {
     height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
+    pointer-events: none; /* Đảm bảo không cản trở các sự kiện chuột */
+    overflow: hidden;
+    z-index: 1; /* Đặt tuyết phía trên nội dung */
 }
 
-.footer-right-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-}
-
-/* 
-footer {
-    height: 50vh;
-    background-color: #274B53;
-}
-
-.footer h2 {
-    font-family: 'Cormorant Garamond';
-}
-
-.footer a {
-    font-family: 'karla';
-    font-size: 1em;
-    display: block;
+.snowflake {
+    position: absolute;
+    top: -10px;
     color: white;
-    text-decoration: none;
-    margin-block: 0.8em;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-.footer h2 {
-    font-size: 1.3em;
-}
-
-
-#group-member p {
     font-size: 1em;
-    margin-block: 0.5em;
-    color: white;
+    opacity: 0.8;
+    animation: fall linear infinite;
+    animation-duration: 3s;
 }
 
-#material-care {
-    margin-top: -20%;
-} */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}

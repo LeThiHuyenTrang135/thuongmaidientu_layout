@@ -141,17 +141,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 /*tuyết rơirơi */
-
 document.addEventListener('DOMContentLoaded', () => {
-    const snowContainer = document.querySelector('#snow-container');
+    const snowContainer = document.querySelector('#snow-container'); // Chọn container tuyết
+    const contentSubscribe = document.querySelector('#content-subscribe'); // Chọn phần content-subscribe
+
+    // Đặt chiều cao của snowContainer bằng chiều cao của content-subscribe
+    snowContainer.style.height = `${contentSubscribe.offsetHeight}px`;
 
     function createSnowflake() {
         const snowflake = document.createElement('div');
         snowflake.classList.add('snowflake');
         snowflake.textContent = '❄'; // Biểu tượng tuyết
-        snowflake.style.left = Math.random() * 100 + 'vw'; // Vị trí ngẫu nhiên theo chiều ngang
+        snowflake.style.left = Math.random() * 100 + '%'; // Vị trí ngẫu nhiên theo chiều ngang
         snowflake.style.animationDuration = Math.random() * 5 + 5 + 's'; // Thời gian rơi ngẫu nhiên (5-10 giây)
         snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; // Kích thước ngẫu nhiên
+        snowflake.style.opacity = Math.random() * 0.5 + 0.5; // Độ trong suốt ngẫu nhiên
 
         snowContainer.appendChild(snowflake);
 
@@ -161,8 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 10000); // Thời gian sống của hạt tuyết (tương ứng với thời gian rơi)
     }
 
-    // Tạo hạt tuyết mỗi 500ms
-    setInterval(createSnowflake, 200);
+    // Tạo hạt tuyết mỗi 300ms
+    setInterval(createSnowflake, 300);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
