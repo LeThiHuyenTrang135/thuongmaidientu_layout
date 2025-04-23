@@ -263,6 +263,7 @@
 
 span.minus-qty-btn,
 span.plus-qty-btn {
+    background-color: none !important;
     height: 18px;
     width: 18px;
     align-items: center;
@@ -272,6 +273,10 @@ span.plus-qty-btn {
 .plus-qty-btn img {
     margin-top: 5px;
     justify-content: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 .quantity-number {
