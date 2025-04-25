@@ -1,3 +1,4 @@
+
 /*phần slide */
 new Swiper('.card-wrapper', {
 
@@ -67,6 +68,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
         item.addEventListener('mouseleave', function () {
             loop.style.display = 'none';
+        });
+    });
+});
+
+
+/*phần slide */
+document.addEventListener('DOMContentLoaded', () => {
+    const cardItems = document.querySelectorAll('.card-item');
+
+    cardItems.forEach((item) => {
+        const link = item.querySelector('.card-link');
+
+        item.addEventListener('mousemove', (e) => {
+            const rect = item.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * 10;
+            const rotateY = ((x - centerX) / centerX) * -10;
+
+            link.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.07)`;
+        });
+
+        item.addEventListener('mouseleave', () => {
+            const link = item.querySelector('.card-link');
+            link.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
         });
     });
 });

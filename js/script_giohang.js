@@ -1,30 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Bắt tất cả các nút tăng/giảm
-    const cartItems = document.querySelectorAll('.cart-item');
+    // Lấy tất cả các phần tử chứa nút tăng/giảm (quantity hoặc quantity-box)
+    const quantityWrappers = document.querySelectorAll('.quantity, .quantity-box');
 
-    cartItems.forEach(item => {
-        const minusBtn = item.querySelector('.quantity-box button:first-child');
-        const plusBtn = item.querySelector('.quantity-box button:last-child');
-        const input = item.querySelector('.quantity-box input');
+    quantityWrappers.forEach(wrapper => {
+        const minusBtn = wrapper.querySelector('button:first-child');
+        const plusBtn = wrapper.querySelector('button:last-child');
+        const input = wrapper.querySelector('input');
 
-        minusBtn.addEventListener('click', () => {
-            let quantity = parseInt(input.value);
-            if (quantity > 1) {
-                input.value = quantity - 1;
-            }
-        });
+        if (minusBtn && plusBtn && input) {
+            minusBtn.addEventListener('click', () => {
+                let quantity = parseInt(input.value) || 1;
+                if (quantity > 1) {
+                    input.value = quantity - 1;
+                }
+            });
 
-        plusBtn.addEventListener('click', () => {
-            let quantity = parseInt(input.value);
-            input.value = quantity + 1;
-        });
+            plusBtn.addEventListener('click', () => {
+                let quantity = parseInt(input.value) || 1;
+                input.value = quantity + 1;
+            });
+        }
     });
 });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const deleteButtons = document.querySelectorAll(".delete-btn");
 
     deleteButtons.forEach(button => {
         button.addEventListener("click", function () {
+            const cartItem = this.closest(".cart-item");
+            if (cartItem) {
+                cartItem.remove();
+            }
+        });
+    });
+    // Xử lý xóa sản phẩm với span .remove-item
+    const removeSpans = document.querySelectorAll(".remove-item");
+    removeSpans.forEach(span => {
+        span.addEventListener("click", function () {
             const cartItem = this.closest(".cart-item");
             if (cartItem) {
                 cartItem.remove();
