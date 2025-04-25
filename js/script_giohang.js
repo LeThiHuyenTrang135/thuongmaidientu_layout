@@ -48,6 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkoutButton = document.querySelector('.checkout'); // Chọn nút Thanh toán
 
     checkoutButton.addEventListener('click', () => {
-        window.location.href = 'thanhtoan.html'; // Chuyển hướng đến thanhtoan.html
+        window.location.href = 'thanhtoan2.html'; // Chuyển hướng đến thanhtoan.html
     });
 });
